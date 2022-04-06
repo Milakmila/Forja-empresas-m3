@@ -149,6 +149,8 @@ button{
     grid-template-rows: repeat(3,1fr);
     gap: 20px;
     background-image: url(../imagenes/2.\ medico.png);
+    background-size: contain;
+    background-repeat: no-repeat;
 
 }
 
@@ -164,11 +166,6 @@ button{
         text-align: center;
     }
 
-.franja{
-    width: 100%;
-    overflow: hidden;
-    
-}
 
 
 #infos{
@@ -328,9 +325,16 @@ button{
     .texto h1{
         font-size: 2.5em;
     }
-    #abajo img{
+    .abajo{
+        display: none;
+        position: relative;
+        top: 20px;
+        bottom: 200px;
+    }
+    .abajo img{
         width: 100%;
         grid-row: 3;
+        
     }
 
     #infos{
