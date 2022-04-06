@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --Rufous:#A40101;
+    --Viridian-green: rgb(44, 163, 171);
+    --Silver:#C4C4C4;
+    --Orange:#F3610E;
+    --Cadet: rgb(29, 27, 69);
+}
+  
+#background{
+    background-image: url(../imagenes/10.png);
+    background-size: cover;
+
+}
+
+body{
+    font-family:'Poppins', sans-serif;
+    font-size: 0.9em;
+
+}
+main{
+    display: grid;
+}
+
+.header{
+    grid-area: header;
+    background-color: #F3610E;
+}
+#boton{
+    justify-self: center;
+    
+
+}
+.volver{
+    grid-area: boton;
+    text-align: center;
+    
+    bottom: 50px;
+    background-color:var(--Cadet);
+    border-color: #2CA3AB;
+    border-radius: 15px;
+    border-style: solid ;
+    border-width: 1.5px;
+    outline: none;
+    padding: 0.2rem 0.5rem;
+}
+
+.volver a{
+    font-size: 0.9em;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+}
+
+/*
+.wrapper {
+    align-self: center;
+    justify-self: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0.9em;
+    grid-auto-rows: 200px;
+    grid-template-areas:
+      ". box-login ."
+      ". box-login .";
+    margin:  100px;
+
+  }*/
+#box-login{
+    grid-area: box-login;
+    align-self: center;
+    justify-self: center;
+    max-width:90%;
+  background-color: whitesmoke;
+  border-width: 2px;
+  border-radius: 0.8rem;
+  margin: 30% 5% ;
+
+  
+}
+.form-group-login{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows:repeat(8,1fr) ;
+    gap: 10px;
+    text-align: center;
+    grid-row: 2;
+
+
+}
+.encabezado{
+    padding: 4em;
+    background-color: rgba(44, 163, 171,0.3);
+    text-align:center;
+    border-radius: 0.8rem 0.8rem 0rem 0rem;
+    border-color: #2CA3AB;
+    border-style: solid ;
+    border-width: 0.5px;
+    outline: none;
+}
+.encabezado img{
+    max-width: 100%;
+}
+.encabezado p{
+    text-align: center;
+    font-size: 0.9em;
+
+}
+.form-label-login{
+    border-radius: 1rem;
+    background-color: rgba(44, 163, 171,0.15);
+    border-color:  rgba(44, 163, 171,0.45);
+    border-style: solid ;
+    outline: none;
+
+}
+#usuario{
+    grid-column: 2;
+    grid-row: 2;
+    
+}
+#nombre{
+    grid-row: 3;
+    grid-column: 2;
+}
+#contrasenia{
+    grid-column: 2;
+    grid-row: 4;
+}
+#password{
+    grid-column: 2;
+    grid-row: 5;
+
+}
+
+.olvidar{
+    grid-row: 6;
+    grid-column: 2;
+    font-size: 13px;
+    font-weight: 500;
+    color: black;
+
+}
+
+#ingresar{
+    grid-row: 7;
+    grid-column: 2;
+   justify-self: center;
+    border-radius: 10px;
+    font-family:'Poppins', sans-serif;
+    background-color: var(--Orange);
+    border-color: var(--Cadet);
+    border-color: rgba(11, 87, 149,1) ;
+    border-style: solid ;
+    border-width: 1px;
+    max-width: 100%;
+    padding: 0.2rem;
+    outline: none;
+    transition: all 0.3s ease-in-out 0s;
+    background: linear-gradient(90deg, var(--Viridian-green) 0%,var(--Orange) 100%);
+    border: none;
+}
+
+#ingresar a{
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+
+}
+#ingresar::before {
+    border-radius: 1000px;
+    min-width: calc(300px + 12px);
+    min-height: calc(60px + 12px);
+    transition: all 0.3s ease-in-out 0s;
+    background: var(--Viridian-green);
+    background: linear-gradient(90deg, var(--Viridian-green) 0%,var(--Orange) 100%);
+      border: none;
+      border-radius: 1000px;
+      box-shadow: 12px 12px 24px rgba(79,209,197,.64);
+      transform: translate(-50%, -50%);
+    }
+
+
+  
+  #ingresar:hover, #ingresar:focus {
+    color: #313133;
+    transform: translateY(-6px);
+  }
+  
+  button:hover::before, button:focus::before {
+    opacity: 1;
+  }
+  
+  #ingresar::after {
+    content: '';
+    width: 30px; height: 30px;
+    border-radius: 100%;
+    border: 6px solid var(--Viridian-green);
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: ring 1.5s infinite;
+  }
+  
+  button:hover::after, button:focus::after {
+    animation: none;
+    display: none;
+  }
+  
+  @keyframes ring {
+    0% {
+      width: 30px;
+      height: 30px;
+      opacity: 1;
+    }
+    100% {
+      width: 300px;
+      height: 300px;
+      opacity: 0;
+    }
+  }
+/*Resolución tabletas*/
+@media screen and (min-width:768px) {
+    #box-login{
+        max-width:90%;
+        margin: 10% 15% 0 15%;
+    }
+    .volver{
+        justify-self: unset;
+        margin: 0 250px;
+
+}
+.box-login{
+    max-width: 100%;
+}
+
+
+/*Resolución media*/
+@media screen and (min-width:1024px) {
+    #box-login{
+        max-width:90%;
+        margin: 10% 30% 0 30%;
+    }
+    .boton{
+        margin-bottom: 1rem;
+    margin-left: 18rem;
+    }
+    
+}
+
+/*Resolución macro*/
+@media screen and(min-width:1200px) {
+    
+}
