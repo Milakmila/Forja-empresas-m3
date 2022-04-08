@@ -169,7 +169,9 @@ button{
         font-weight: 400;
         text-align: center;
     }
-
+.ubicacionbtn{
+    justify-self: center;
+}
 
 
 #infos{
