@@ -42,7 +42,9 @@ p{
     border-color: #2CA3AB;
     border-style: solid ;
     border-width: 2px;
+    
 }
+
 .user {
     grid-row: 2;
 
@@ -62,15 +64,14 @@ p{
 } 
 #botones{
     display: grid;
-    grid-template-rows: auto auto auto;
+    grid-template-rows:auto auto;
     grid-template-columns: auto auto;
 
 }
 #distancia{
-    margin-top: 120px;
+    margin-top: 90px;
 }
 .agregar{
-    margin: 0 20%;
     background-color: var(--Orange);
     padding:0.5rem ;
     border-radius: 4px;
@@ -78,13 +79,21 @@ p{
     border-style: solid ;
     border-width: 1px;
     outline: none;
+    animation: infinite-spinning 2s 0.5s;
 
 }
-.agregar a{
-    text-decoration: none;
-    color: white;
-    font-weight: 600;
-}
+@keyframes infinite-spinning {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+ 
+
+  
+ 
 
 #search2{
     width:150px ;
@@ -124,25 +133,15 @@ p{
     grid-template-areas: 
     "container-table1"
     "container-table2";
+    
 }
 .container-table1{
     grid-area: container-table1;
 }
 .container-table2{
     grid-area: container-table2;
-    padding: 10% ;
 }
 
-#container-table{
-    display: grid;
-    width: 90%;
-    max-width: 50px auto;
-    grid-template-columns: repeat(3, 100px) ;
-    grid-auto-rows: 50px;
-    margin: 5% 10%;
-   
-    
-}
 
 
 table th{
@@ -168,6 +167,7 @@ table td{
     border-width: 1px;
     outline: none;
     margin-right: 0.4rem;
+    
 
 }
 .btn-azul h4{
@@ -202,15 +202,26 @@ table td{
 
 /*Resolución tabletas*/
 @media screen and (min-width:768px) {
-    #container-table{
+    .container-table{
         grid-template-columns: repeat(6, 100px) ;
+    
         grid-column: initial;
         max-width: 100%;
+    }
+ .user, .off{
+        justify-self: end;
+        
     }
 .table-box{
     grid-template-areas: 
     "container-table1 container-table2";
 }
+    #botones{
+        display: grid;
+        grid-template-rows: auto auto auto;
+        grid-template-columns: 80% auto;
+
+    }
 
 .btn-azul{
     display: grid;
@@ -245,4 +256,5 @@ table td{
     color: white;
     grid-column: 2;
 
+}
 }

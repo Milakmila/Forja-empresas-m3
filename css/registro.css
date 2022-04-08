@@ -282,6 +282,22 @@ h4{
         grid-area: off;
     
     }
+   
+    .agregar{
+        margin: 2% 47%;
+    }
+
+    .sino{
+        text-align: left;
+    }
+
+    .sino2{
+        text-align: left;
+    }
+
+}
+
+@media screen and (min-width: 1024px) {
     #forms{
         margin: 0 20%;
     }
@@ -315,16 +331,4 @@ h4{
     .fila8{
         flex-direction: row;
     }
-    .agregar{
-        margin: 2% 47%;
-    }
-
-    .sino{
-        text-align: left;
-    }
-
-    .sino2{
-        text-align: left;
-    }
-
 }

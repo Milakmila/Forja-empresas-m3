@@ -43,15 +43,16 @@ nav{
     display: grid;
     align-items: center;
     background-color: #1c1d36 ;
-    width: 100%;
+    width: 100vh;
     animation: draw 500ms linear 1s forwards;
   
 }
 
+
 @keyframes up {
 	
 	100% {
-		transform: translateY(0);
+		transform: translateY(20);
 	}
 	
 }
@@ -75,8 +76,6 @@ nav{
     text-decoration: none;
 
 }
-
-
 
 #izquierda h4{
     margin: 0rem 0rem;
@@ -134,7 +133,7 @@ nav{
     display: grid;
     max-width: 100%;
     grid-area: user;
-    justify-self:end;
+    justify-self:center;
     grid-template-columns: 20% 19%;
     grid-template-rows: 1fr;
     background: linear-gradient(to bottom , #C4C4C4,white);
@@ -182,6 +181,7 @@ nav{
     grid-template-rows:  50%;
     grid-template-columns: 50% ;
     width:280px;
+    justify-self: center;
 }
 .botones button {
     min-width: 3rem;
@@ -194,7 +194,7 @@ nav{
 }
 
 #search {
-    width:350px;
+    width:40vh;
    grid-area: search;
    border-width: 1px;
    font-size:1.2em ;
@@ -211,13 +211,11 @@ nav{
 }
 .btn-reload{
     grid-area: btn-reload;
-   
 }
 .btn-search{
     grid-area: btn-search;
-
-   
-
+    align-self: flex-start;
+    justify-self: flex-end;
 }
 .btn-reload{
     grid-area: btn-reload;
@@ -266,13 +264,15 @@ nav{
 
     }
     #izquierda img{
-        max-width: 90%;
+        max-width: 70%;
     }
     .items{
         width: 34vw;
     }
     .box-izquierda{
-        min-width: 1em;
+        width: 13em;
+        justify-items: center;
+        align-self: ce;
     }
     .dashboard{
         grid-template-areas: 
@@ -299,9 +299,11 @@ nav{
     }
     .btn-search{
         align-self: flex-end;
+        justify-self: flex-end;
     }
     .btn-reload{
         align-self: flex-end;
+  
     }
     .guerreros{
         grid-column: 2/4;
@@ -317,6 +319,9 @@ nav{
         height: 600px;
         float: left;
     }
+    #izquierda img{
+        max-width: 100%;
+    }
     .dashboard{
         grid-template-rows: 84% 30px 40%;
     }
@@ -326,6 +331,7 @@ nav{
     .btn-menu{
         display: none;
     }
+    
     .items{
         display: block;
         width: 19vw;
