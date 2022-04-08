@@ -1,0 +1,362 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --Rufous:#A40101;
+    --Viridian-green: rgb(44, 163, 171);
+    --Silver:#C4C4C4;
+    --Orange:#F3610E;
+    --Cadet: rgb(29, 27, 69);
+}
+body{
+    font-family:'Poppins', sans-serif;
+    font-size: 1em;
+    text-align: center;
+}
+h1,h2,h3{
+    color: var(--Orange);
+}
+
+p{
+   color: black; 
+   font-size: 1em;
+}
+/*index*/
+
+a:link{color:black}
+a:visited {color:black}
+a:focus{color: #A40101;}
+
+.dashboard{
+    display: grid;
+    grid-template-areas: 
+    "user"
+    "left"
+    "info"
+    "abajo";
+}
+nav{
+    grid-area: left;
+    display: grid;
+    align-items: center;
+    background-color: #1c1d36 ;
+    width: 100vh;
+    animation: draw 500ms linear 1s forwards;
+  
+}
+
+
+@keyframes up {
+	
+	100% {
+		transform: translateY(20);
+	}
+	
+}
+
+@keyframes draw {
+	
+	100% {
+		width: 100%;
+	}
+	
+}
+#izquierda img{
+    align-self: center;
+    justify-self: center;
+    
+}
+#izquierda i{
+    display:grid;
+    justify-content: center;
+    font-size:1.5em;
+    text-decoration: none;
+
+}
+
+#izquierda h4{
+    margin: 0rem 0rem;
+}
+#chk-menu{
+    display: none;
+}
+#chk-menu:checked ~.items{
+    display: block;
+    display: flex;
+    flex-direction: column;
+
+}
+.btn-menu{
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;/*Al pasar por encima muestra la manito*/
+}
+.items{
+    width: 100vw;
+    display: none;
+
+}
+
+.box-izquierda{
+    padding: 0.3rem;
+    text-decoration: none;
+    color: white;
+    display: grid;
+    text-align: center;
+    justify-self: center;
+    background-color: #C4C4C4;
+    margin: 1rem 1rem;
+    border-radius: 10px;
+    border-color: var(--Orange);
+    border-style: solid ;
+    border-width: 3px;
+    outline: none;
+}
+.box-izquierda a{
+    text-decoration: none;
+}
+.box-izquierda h4{
+    margin-top: 0.2rem;
+    font-weight: 600;
+    font-size: 19px;
+}
+
+.box-izquierda:hover{
+    color: var(--Orange);
+}
+
+
+.user{
+    display: grid;
+    max-width: 100%;
+    grid-area: user;
+    justify-self:center;
+    grid-template-columns: 20% 19%;
+    grid-template-rows: 1fr;
+    background: linear-gradient(to bottom , #C4C4C4,white);
+    background-color: #C4C4C4;
+    text-align: left;
+    border-radius: 10px;
+    font-size: 0.9em;
+}
+.user i{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    min-height: 100%;
+    border-radius: 50%;
+    border-color: var(--Orange);
+    background-color: white;
+    border-style: solid ;
+    border-width: 2px;
+    outline: none;
+}
+.user p{
+    grid-column: 2;
+    grid-row: 1/3;
+    align-items: center;
+    text-align: justify;
+}
+
+
+.principal{
+    grid-area: info;
+  
+}
+.principal h2{
+    margin:3rem ;
+    font-size: 2.3em;
+    font-weight: 400;
+}
+
+.botones{
+    display: grid;
+    grid-template-areas: 
+    "search search"
+    "btn-search btn-reload";
+    grid-template-rows:  50%;
+    grid-template-columns: 50% ;
+    width:280px;
+    justify-self: center;
+}
+.botones button {
+    min-width: 3rem;
+    background-color: var(--Cadet);
+    border-color: var(--Viridian-green);
+    border-width: 3.5px;
+    border-radius: 5px;
+    margin-left:  1rem;
+    
+}
+
+#search {
+    width:40vh;
+   grid-area: search;
+   border-width: 1px;
+   font-size:1.2em ;
+   border-color: white;
+   border-width: 0px;
+   border-bottom: 2px var(--Cadet);
+   padding-left: 1.5rem;
+   border-style: groove;
+   grid-column: 1/3;
+   margin-bottom: 20px;
+   margin-left: 60px;
+
+   
+}
+.btn-reload{
+    grid-area: btn-reload;
+}
+.btn-search{
+    grid-area: btn-search;
+    align-self: flex-start;
+    justify-self: flex-end;
+}
+.btn-reload{
+    grid-area: btn-reload;
+ 
+  
+}
+.buscar2{
+    width: 2.5rem;
+    height: 1.8rem;
+    background-color: var(--Cadet);
+    border-color: var(--Viridian-green);
+    border-width: 3.5px;
+    border-radius: 5px;
+   
+
+}
+.buscar{
+    color: white;
+}
+
+.reload{
+    color: white;
+}
+.guerreros {
+    border-radius: 50%;
+    opacity: .5;
+    }
+.guerreros img{
+    max-width: 200px;
+    float: right;
+}
+#abajo{
+    grid-area: abajo;
+
+
+}
+#abajo img{
+    width: 100%;
+}
+
+
+/*Resolución tabletas*/
+@media screen and (min-width:768px) {
+    #izquierda{
+        max-width:16em ;
+
+    }
+    #izquierda img{
+        max-width: 70%;
+    }
+    .items{
+        width: 34vw;
+    }
+    .box-izquierda{
+        width: 13em;
+        justify-items: center;
+        align-self: ce;
+    }
+    .dashboard{
+        grid-template-areas: 
+    "left info user"
+    "abajo abajo abajo"
+;
+    grid-template-columns: 36% 48% 15%;
+    grid-template-rows: 110% 60px 40%;
+
+    }
+    .user{
+        display: grid;
+        max-width: 100%;
+        max-height: 10%;
+        grid-area: user;
+        justify-self: center;
+        grid-template-columns: 20% 19%;
+        grid-template-rows: 50px;
+    }
+    .principal{
+        display:grid;
+        grid-template-columns: 80%;
+
+    }
+    .btn-search{
+        align-self: flex-end;
+        justify-self: flex-end;
+    }
+    .btn-reload{
+        align-self: flex-end;
+  
+    }
+    .guerreros{
+        grid-column: 2/4;
+
+
+    }
+    
+}
+
+/*Resolución media*/
+@media screen and (min-width:1024px) {
+    nav{
+        height: 600px;
+        float: left;
+    }
+    #izquierda img{
+        max-width: 100%;
+    }
+    .dashboard{
+        grid-template-rows: 84% 30px 40%;
+    }
+    .chk-menu{
+        display: none;
+    }
+    .btn-menu{
+        display: none;
+    }
+    
+    .items{
+        display: block;
+        width: 19vw;
+        
+    }
+    .botones{
+      display: grid;
+      grid-template-areas: 
+      "search btn-search btn-reload";
+      grid-template-columns: auto 20% 20%;
+      grid-template-rows: auto;
+    
+    }
+    .guerreros{
+        position: relative;
+        top: 140px;
+    }
+    .abajo{
+        position: relative;
+        bottom: 100px;
+        top: 5%;
+    }
+}
+
+/*Resolución macro*/
+@media screen and (min-width:1200px) {
+    
+}
