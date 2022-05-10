@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../css/dashboard.css">
+    <link rel="stylesheet" type="text/css" href="../css/modal.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -52,17 +53,16 @@
         <article class="principal">
         <h2>BIENVENIDOS</h2>
         <div class="botones">
-            <div class="search">
-                <label for="buscar">
-                <input type="search" name="search" id="search" placeholder="Digita el numero de documento" required>
-                </label>
-            </div>
+                <form>
+                    <input type="search" name="search" class="search"id="search1" placeholder="Digita el numero de documento">
+                </form>
+           
     
             <div class="btn-search">
-                <a href="pacientes.html">
-                    <button class="buscar"> <i class="fa-solid fa-magnifying-glass buscador fa-1.5x"></i>
+            
+                    <button class="buscar" id="enviar"> <i class="fa-solid fa-magnifying-glass buscador fa-1.5x"></i>
                     </button>
-                </a>
+            
             </div>
             <div class="btn-reload">
                 <a href="registro.html">
@@ -70,6 +70,165 @@
                 </button>
                 </a>
             </div>
+            <section id="modal1" class="modal1">
+        
+                
+                <div class="modalContainer">
+            
+                    <form method="post" enctype="multipart/form-data">
+                        <div class="title">
+                            <h1>VACUNACIÓN</h1>
+                        </div>
+                        <div id="datos">
+                        
+                            <h3><h4>Nombres:</h4> Luisa Fernandez</h3>
+                            <h3><h4>Documento y #documento</h4>CC: 52368795 </h3>
+                            
+                        </div>
+                        
+                
+                        <div id="vacunas">
+                            <p>Vacunas:</p>
+                            <div class="dosis">
+                            <img  class="dice" src="../imagenes/dice-first.svg" alt="">
+                            
+                            <h3><strong>Vacuna:</strong> Pfizer</h3>
+                            <h3><strong>Fecha:</strong>18/06/2021</h3>
+                            </div>
+                        </div>
+                        <div id="ir">
+                        <a href="../views/registro.html" id="ir" class="ir" >
+                           Registro Vacuna
+                            </a>
+                            <br>
+                            <a href="../views/dashboard.html" id="ir">
+                               Volver
+                                 </a>
+                        </div>
+                        </div>
+                    </div>  
+
+
+                </section>
+                <section id="modal4" class="modal4">
+        
+                
+                    <div class="modalContainer2">
+
+                            <div class="vacuna">
+                               <h2>No se encuentra Registro</h2>
+                            </div>
+                           <div id="ir2">
+                            <a href="../views/registro.html" id="ir" onclick="enlance">
+                               Registrar
+                                </a>
+                                <br>
+                                <a href="../views/dashboard.html"  id="enlace4">
+                                   Volver
+                                     </a>
+                            </div>
+                            </div>
+                        </div>  
+    
+    
+                    </section>
+
+                    <section id="modal3" class="modal3">
+        
+                
+                        <div class="modalContainer">
+                    
+                            <form method="post" enctype="multipart/form-data">
+                                <div class="title">
+                                    <h1>VACUNACIÓN</h1>
+                                </div>
+                                <div id="datos">
+                                
+                                    <h3><h4>Nombres:</h4> Julieta Bella</h3>
+                                    <h3><h4>Documento y #documento</h4>CC: 1001235478 </h3>
+                                    
+                                </div>
+                                
+                        
+                                <div id="vacunas3">
+                                    <p>Vacunas:</p>
+                                    <div class="dosis2">
+                                    <img  class="dice" src="../imagenes/dice-first.svg" alt="">
+                                    
+                                    <h3><strong>Vacuna:</strong> Moderna</h3>
+                                    <h3><strong>Fecha:</strong>08/08/2021</h3>
+                                    </div>
+                                    <div class="dosis2">
+                                        <img  class="dice" src="../imagenes/dice-second.svg" alt="">
+                                        
+                                        <h3><strong>Vacuna:</strong> Moderna</h3>
+                                        <h3><strong>Fecha:</strong>18/01/2022</h3>
+                                    </div>
+                                        <div class="dosis2">
+                                            <img  class="dice" src="../imagenes/dice-third.svg" alt="">
+                                            
+                                            <h3><strong>Vacuna:</strong> Sinovac</h3>
+                                            <h3><strong>Fecha:</strong>18/06/2021</h3>
+                                            </div>
+                                    </div>
+                                
+                                <div id="ir">
+                                <a href="../views/registro.html" id="ir" >
+                                   Registro Vacuna
+                                    </a>
+                                    <br>
+                                    <a href="../views/dashboard.html" id="ir">
+                                       Volver
+                                         </a>
+                                </div>
+                                </div>
+                            </div>  
+        
+        
+                        </section>
+
+                        <section id="modal4" class="modal4">
+        
+                
+                            <div class="modalContainer">
+                        
+                                <form method="post" enctype="multipart/form-data">
+                                    <div class="title">
+                                        <h1>VACUNACIÓN</h1>
+                                    </div>
+                                    <div id="datos">
+                                    
+                                        <h3><h4>Nombres:</h4> Sebastian Quiroga</h3>
+                                        <h3><h4>Documento y #documento</h4>CC: 1007203506 </h3>
+                                        
+                                    </div>
+                                    
+                            
+                                    <div id="vacunas">
+                                        <p>Vacunas:</p>
+                                        <div class="dosis">
+                                        <img  class="dice" src="../imagenes/dice-first.svg" alt="">
+                                        
+                                        <h3><strong>Vacuna:</strong> Sinovac</h3>
+                                        <h3><strong>Fecha:</strong>18/06/2021</h3>
+                                        </div>
+                                    </div>
+                                    <div id="ir">
+                                    <a href="../views/registro.html" id="ir" >
+                                       Registro Vacuna
+                                        </a>
+                                        <br>
+                                        <a href="../views/dashboard.html" id="ir">
+                                           Volver
+                                             </a>
+                                    </div>
+                                    </div>
+                                </div>  
+            
+            
+                            </section>
+
+    
     </div>
         
     </article>
@@ -86,6 +245,6 @@
 
 </div>
 </main>
-
+<script src="../js/dosis.js"></script>
 </body>
 </html>
