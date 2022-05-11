@@ -176,8 +176,8 @@ nav{
 .botones{
     display: grid;
     grid-template-areas: 
-    "search search"
-    "btn-search btn-reload";
+    "search search search"
+    "btn-search btn-reload btn-forms";
     grid-template-rows:  50%;
     grid-template-columns: 50% ;
     width:280px;
@@ -193,7 +193,7 @@ nav{
     
 }
 
-#search {
+#search1 {
     width:40vh;
    grid-area: search;
    border-width: 1px;
@@ -221,6 +221,10 @@ nav{
     grid-area: btn-reload;
  
   
+}
+.color{
+    grid-area: btn-forms;
+    color: white;
 }
 .buscar2{
     width: 2.5rem;
@@ -255,6 +259,7 @@ nav{
 #abajo img{
     width: 100%;
 }
+
 
 
 /*Resolución tabletas*/
@@ -305,6 +310,8 @@ nav{
         align-self: flex-end;
   
     }
+   
+   
     .guerreros{
         grid-column: 2/4;
 
@@ -345,6 +352,7 @@ nav{
       grid-template-rows: auto;
     
     }
+   
     .guerreros{
         position: relative;
         top: 140px;

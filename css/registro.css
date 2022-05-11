@@ -48,6 +48,9 @@ p{
     border-style: solid ;
     border-width: 2px;
 }
+.superior a{
+    color:#18182a;
+}
 .user {
     grid-area: user;
     justify-self: flex-end;
@@ -212,9 +215,9 @@ h4{
 .form-label-largo{
     display: grid;
     margin: 3% 4%;
-    border-color: #2CA3AB;
+    border:2.5px solid #2CA3AB;
     border-style: solid ;
-    border-width: 1px;
+    border-radius: 5px;
     width: 70%;
     padding:10px 0 ;
     outline: none;
@@ -238,8 +241,10 @@ h4{
 
 }
 
-
-
+.observaciones {
+    display: flex;
+    justify-content: center;
+}
 .agregar{
     display: grid;
     grid-template-columns: auto auto;

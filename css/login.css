@@ -228,6 +228,10 @@ main{
       opacity: 0;
     }
   }
+.res{
+    visibility: hidden;
+    opacity: 0;
+}
 /*Resolución tabletas*/
 @media screen and (min-width:768px) {
     #box-login{
