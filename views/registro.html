@@ -51,9 +51,9 @@
             <h4>DATOS DEL PACIENTE</h4>
         </div>
         <div class="fila2">
-                <input  class="form-label-largo"  name="nombre" id="nombre" type="text" placeholder="Escribe el nombre" required="text"> 
+                <input  class="form-label-largo"  name="nombre" id="nombre" type="text" placeholder="Escribe el nombre" required> 
         
-                <input class="form-label-largo"   name="apellidos" id="apellidos" type="text" placeholder="Apellidos" required="text"> 
+                <input class="form-label-largo"   name="apellidos" id="apellidos" type="text" placeholder="Apellidos" aria-required="true"> 
         </div>
         <div class="fila3">
             <input class="form-label-largo"    name="identificacion" id="identificacion" type="number" placeholder="Numero de identificacion" required="number" max="10"> 
@@ -1320,14 +1320,14 @@
             <input name="respuesta2" id="respuesta2" type="radio" checked>Si
             <input name="respuesta2" id="respuesta2" type="radio" checked>No
         </div>
-
+        <div class="agregar-button" >
+            <button class="agregar"> <a href="dashboard.html" >Guardar</a>
+                <i class="fa-solid fa-user icon"></i>
+                </button> 
+        </div>
     </section>
 
-    <div class="agregar-button" >
-        <button class="agregar"> <a href="dashboard.html" >Guardar</a>
-            <i class="fa-solid fa-user icon"></i>
-            </button> 
-    </div>
+
 </main>
 <footer>
     <p class="footp"> @2020 FORJA EMPRESAS</p>
