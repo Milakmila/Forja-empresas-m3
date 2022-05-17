@@ -119,6 +119,7 @@ main{
     border-color:  rgba(44, 163, 171,0.45);
     border-style: solid ;
     outline: none;
+    padding: 8px;
 
 }
 #usuario{
@@ -228,10 +229,6 @@ main{
       opacity: 0;
     }
   }
-.res{
-    visibility: hidden;
-    opacity: 0;
-}
 /*Resolución tabletas*/
 @media screen and (min-width:768px) {
     #box-login{
