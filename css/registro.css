@@ -48,9 +48,6 @@ p{
     border-style: solid ;
     border-width: 2px;
 }
-.superior a{
-    color:#18182a;
-}
 .user {
     grid-area: user;
     justify-self: flex-end;
@@ -215,9 +212,9 @@ h4{
 .form-label-largo{
     display: grid;
     margin: 3% 4%;
-    border:2.5px solid #2CA3AB;
+    border-color: #2CA3AB;
     border-style: solid ;
-    border-radius: 5px;
+    border-width: 1px;
     width: 70%;
     padding:10px 0 ;
     outline: none;
@@ -241,10 +238,8 @@ h4{
 
 }
 
-.observaciones {
-    display: flex;
-    justify-content: center;
-}
+
+
 .agregar{
     display: grid;
     grid-template-columns: auto auto;
@@ -273,10 +268,78 @@ h4{
     text-align: center;
     text-align: center;
 }
+#respuesta1{
+    text-align: center;
+}
 
+.frm-input{
+    margin: 10px 80px;
+    border-color: #2CA3AB;
+    border-style: solid ;
+    border-width: 1px;
+    width: 70%;
+    padding:10px 0 ;
+    outline: none;
+    animation: pulse 1s 0.8s;
+    min-height: 2.5rem;
+    height: 100%;
+
+}
+
+.frm-input:focus{
+    outline-style: none;
+    
+}
+
+.frm-checkbox{
+    margin: 1rem 0.5rem;
+}
+
+.btn-enviar{
+    border-radius: 5px;
+    padding: 1rem 2rem;
+    color: black;
+    font-weight: bold;
+}
+
+.msn-error{
+    color:coral;
+    font-size: 11px;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.msn-error-visible{
+    visibility: visible;
+    opacity: 1;
+}
+
+.frm-group-input{
+    position: relative;
+}
+
+.frm-icono{
+    
+    position: absolute;
+    right: 1rem;
+    bottom: 0.5rem;
+    bottom: 1.8rem;
+    z-index: 100;
+    opacity: 0;
+}
+
+.error .frm-icono{
+    color: red;
+    opacity: 1;
+}
+
+.success .frm-icono{
+    color:chartreuse;
+    opacity: 1;
+}
 
 /*Resolución tabletas*/
-@media screen and (min-width:700px) {
+@media screen and (min-width:728px) {
     .superior{
         grid-template-areas:
         "logo user off";
@@ -318,10 +381,19 @@ h4{
     .sino2{
         text-align: left;
     }
-
+    .frm-input{
+        margin: 10px 390px 0 140px;
+    }
 }
 
 @media screen and (min-width: 1024px) {
+   .form-label-largo{
+       width: 52%;
+   }
+   .form-label-last{
+    width: 32%;
+}
+    
     #forms{
         margin: 0 20%;
     }
@@ -355,4 +427,8 @@ h4{
     .fila8{
         flex-direction: row;
     }
+    .frm-input{
+        margin: 10px 40px ;
+    }
+
 }

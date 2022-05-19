@@ -41,39 +41,63 @@
         <h1>Registro Usuario Nuevo</h1>
     </div>
     <section id="forms">
-    
+    <form id="frm-usuario" method="post" action="">
         <div class="fila1">
             <input class="form-label" type="date" id="date" name="fecha"> <!--min y max para no mostrar todas las fechas-->
-            <input class="form-label"  name="Registro" id="registro" type="number" placeholder="N registro" required="number"> 
+            <input class="form-label"  name="Registro" id="registro" type="number" placeholder="N registro"> 
         </div>
         <div class="divisionforms">
             <i class="fa-solid fa-user icon3"></i>
             <h4>DATOS DEL PACIENTE</h4>
         </div>
         <div class="fila2">
-                <input  class="form-label-largo"  name="nombre" id="nombre" type="text" placeholder="Escribe el nombre" required> 
+            <div class="frm-group" id="g-nombre">
+                <div class="frm-group-input">
+                    <input type="text" name="nombre" id="nombre" class=" frm-input" placeholder="Escribe el nombre" >
+                    <i class="frm-icono fa-solid fa-circle-exclamation"></i>
+                    <span class="msn-error">Solo se pueden digitar letras máximo 50 caracteres</span>
+                </div>
+            </div>
+            <div class="frm-group" id="g-apellido">
+    
+                <div class="frm-group-input">
+                    <input type="text" name="apellido" id="apellido" class=" frm-input" placeholder="Apellidos" >
+                    <i class="frm-icono fa-solid fa-circle-exclamation"></i>
+                    <span class="msn-error">Solo se pueden digitar letras máximo 50 caracteres</span>
+                </div>
+            </div>
         
-                <input class="form-label-largo"   name="apellidos" id="apellidos" type="text" placeholder="Apellidos" aria-required="true"> 
         </div>
         <div class="fila3">
-            <input class="form-label-largo"    name="identificacion" id="identificacion" type="number" placeholder="Numero de identificacion" required="number" max="10"> 
-        
-    
-            <select class="form-label-largo"  name="select" id="tipodoc"> 
-                <option value="0" selected>Tipo de documento</option>
-                <option value="1">Cedula de ciudadania</option>
-                <option value="2">Tarjeta de identidad</option>
-                <option value="3">Pasaporte</option>
-                <option value="4">Registro civil</option>
-            </select>
+            <div class="frm-group success" id="g-numdoc">
 
+                <div class="frm-group-input">
+                    <input type="text" name="numdoc" id="numdoc" class="frm-input" placeholder="Numero de identificacion">
+                    <i class="frm-icono fa-solid fa-circle-exclamation"></i>
+                    <span class="msn-error">Solo puedes ingresar números mínimo 7 y máximo 10</span>
+                </div>
+            </div>
+    
         
+            <div class="frm-group" id="g-tipodoc">
+                <div class="frm-group-input">
+                    <select name="tipodoc" id="tipodoc" class=" frm-input">
+                        <option value="0">Seleccione un tipo de documento</option>
+                        <option value="1">Cédula de Ciudadanía</option>
+                        <option value="2">Cédula de extranjería</option>
+                        <option value="3">Pasaporte</option>
+                        <option value="4">Registro civil</option>
+                    </select>
+                    
+                    <span class="msn-error">Seleccione un tipo de documento</span>
+                </div>
+            </div>
         </div>
     
         <div class="fila4">
             <input class="form-label-largo" type="date" id="date" name="fecha"> 
         
-            <input class="form-label-largo"   name="edad" id="edad" type="number" placeholder="Edad" required="number">   
+            <input class="form-label-largo"   name="edad" id="edad" type="number" placeholder="Edad" >   
         
         </div>
     
@@ -121,7 +145,7 @@
             </select>
 
        
-        <select class="form-label-largo"  id="city" required>
+        <select class="form-label-largo"  id="city">
             <option value="">Municipio de residencia</option>
             <option value="Abejorral">Abejorral</option>
             <option value="Abrego">Abrego</option>
@@ -1246,14 +1270,25 @@
 
         </div>
         <div class="fila6">
-            <input class="form-label-largo" name="direccion" id="direccion" type="text" type="number" placeholder="Dirección" required> 
-
-            <input class="form-label-largo"  type="email"id="mail" name="email"placeholder="Correo">
+            <input class="form-label-largo" name="direccion" id="direccion" type="text" type="number" placeholder="Dirección"> 
+            <div class="frm-group" id="g-correo">
+                <div class="frm-group-input">
+                    <input type="text" name="correo" id="correo" class="frm-input" placeholder="Correo">
+                    <i class="frm-icono fa-solid fa-circle-exclamation"></i>
+                    <span class="msn-error">Su correo no tiene el formato example@domain.com</span>
+                </div>
+            </div>
+        
         </div>
         <div class="fila7">
-            <input class="form-label-largo"  name="telefono" id="telefono" type="number" placeholder="Telefono fijo" required> 
-
-            <input class="form-label-largo"  name="celular" id="celular" type="number" placeholder="Celular" required> 
+            <input class="form-label-largo"  name="telefono" id="telefono" type="number" placeholder="Telefono fijo"> 
+            <div class="frm-group" id="g-telefono">
+                <div class="frm-group-input">
+                    <input type="text" name="telefono" id="telefono" class="frm-input"  placeholder="Celular">
+                    <i class="frm-icono fa-solid fa-circle-exclamation"></i>
+                    <span class="msn-error">Solo puedes ingresar números mínimo 7 y máximo 10</span>
+                </div>
+            </div>
         </div>
         <div class="divisionforms-3">
             <i class="fa-solid fa-heart-pulse icon3"></i><!--Icono location-->
@@ -1305,7 +1340,7 @@
                     <option value="7">Discapacidad Múltiple</option>
                     
                 </select> 
-            <input class="form-label-last"  name="alergias" id="alergias" type="text" placeholder="Alergias" required> 
+            <input class="form-label-last"  name="alergias" id="alergias" type="text" placeholder="Alergias"> 
 
         </div>
         <div class="sino">
@@ -1320,19 +1355,18 @@
             <input name="respuesta2" id="respuesta2" type="radio" checked>Si
             <input name="respuesta2" id="respuesta2" type="radio" checked>No
         </div>
-        <div class="agregar-button" >
-            <button class="agregar"> <a href="dashboard.html" >Guardar</a>
-                <i class="fa-solid fa-user icon"></i>
-                </button> 
-        </div>
+
     </section>
-
-
+    <button type="submit" class="agregar btn-enviar" >Guardar <i class="fa-solid fa-user icon"></i>
+    </button> 
+</form>
+ 
 </main>
+
 <footer>
     <p class="footp"> @2020 FORJA EMPRESAS</p>
 </footer>         
             
-    
+<script src="../js/required.js"></script>
 </body>
 </html>
